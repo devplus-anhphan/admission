@@ -1,0 +1,74 @@
+  /* Scroll to the menu bar smoothly after clicking the button */
+  html {
+    scroll-behavior: smooth;
+  }
+  .admission {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(501px, 1fr));
+  }
+  /* Select all elements of content-admission and ing-admission class that are children of 'admission' class and set the children' background to gray*/
+  .admission > .content-admission, .img-admission {
+    background-color: lightblue;
+  }
+  /* Styling all <p> element with id='text-admission' */
+  p#text-admission{
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 100px;
+    line-height: 1.6;
+  }
+  /* Style title */
+  .content-admission p#title-admission{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-weight: 700;
+    font-family: "Nunito";
+    font-size: 30px;
+  }
+  .img-admission img{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+  /* Styling button */
+  .button {
+    background-color: blue; 
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px;
+    margin: 4px 50px;
+    cursor: pointer; /* Change the cursor to pointer from default each time user hovers the button */
+    border-radius: 40px;
+  }
+  /* After hovering the button, the background color changes to red*/
+  .button:hover{
+    background-color: red;
+  }
+  span {
+    font-weight: 800;
+    font-size: 12;
+  }
+  /* New style if the screen is 800px or smaller */
+  @media screen and (max-width: 800px) {
+    /* For mobile phones: */
+    .admission {
+      grid-template-columns: auto ;
+      background-color: white;
+    }
+      /* Styling all <p> element with id='text' */
+    p#text-admission{
+      padding-right: 50px;
+      padding-left: 10px;
+    }
+    .content-admission p#title-admission{
+      padding-top: 0px;
+      padding-left: 10px;
+    }
+    .button {
+      margin: 4px 10px;
+    }
+  }
